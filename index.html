@@ -13309,11 +13309,11 @@ a.anchor-link {
 <span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;weight_high_lbs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;weight_high_lbs&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
 
 <span class="c1"># Calculate averages and add values as new columns</span>
-<span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;Average Height&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;height_low_inches&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;height_high_inches&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;Average Weight&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;weight_low_lbs&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;weight_high_lbs&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;Average Height (in)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;height_low_inches&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;height_high_inches&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;Average Weight (lb)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;weight_low_lbs&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">size_df</span><span class="p">[</span><span class="s1">&#39;weight_high_lbs&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># Create new dataframe with desired columns</span>
-<span class="n">summary_size_df</span> <span class="o">=</span> <span class="n">size_df</span><span class="p">[[</span><span class="s1">&#39;Breed&#39;</span><span class="p">,</span> <span class="s1">&#39;Average Height&#39;</span><span class="p">,</span> <span class="s1">&#39;Average Weight&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">summary_size_df</span> <span class="o">=</span> <span class="n">size_df</span><span class="p">[[</span><span class="s1">&#39;Breed&#39;</span><span class="p">,</span> <span class="s1">&#39;Average Height (in)&#39;</span><span class="p">,</span> <span class="s1">&#39;Average Weight (lb)&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
 <span class="c1"># View dataframe</span>
 <span class="n">summary_size_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13353,8 +13353,8 @@ a.anchor-link {
     <tr style="text-align: right;">
       <th></th>
       <th>Breed</th>
-      <th>Average Height</th>
-      <th>Average Weight</th>
+      <th>Average Height (in)</th>
+      <th>Average Weight (lb)</th>
     </tr>
   </thead>
   <tbody>
@@ -13679,7 +13679,7 @@ a.anchor-link {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;sqlalchemy.engine.result.ResultProxy at 0x10bae8080&gt;</pre>
+<pre>&lt;sqlalchemy.engine.result.ResultProxy at 0x10c8ab1d0&gt;</pre>
 </div>
 
 </div>
@@ -13704,8 +13704,8 @@ a.anchor-link {
 <span class="n">engine</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;CREATE TABLE ultimutt_size (</span><span class="se">\</span>
 <span class="s1">                id INT PRIMARY KEY AUTO_INCREMENT,</span><span class="se">\</span>
 <span class="s1">                Breed TEXT,</span><span class="se">\</span>
-<span class="s1">                `Average Height` INT,</span><span class="se">\</span>
-<span class="s1">                `Average Weight` INT</span><span class="se">\</span>
+<span class="s1">                `Average Height (in)` INT,</span><span class="se">\</span>
+<span class="s1">                `Average Weight (lb)` INT</span><span class="se">\</span>
 <span class="s1">                );&#39;</span><span class="p">)</span>
 
 <span class="c1"># Create &#39;classification&#39; table</span>
@@ -13743,7 +13743,7 @@ a.anchor-link {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;sqlalchemy.engine.result.ResultProxy at 0x10bae8e48&gt;</pre>
+<pre>&lt;sqlalchemy.engine.result.ResultProxy at 0x10c8de048&gt;</pre>
 </div>
 
 </div>
@@ -13885,7 +13885,7 @@ a.anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Join tables</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s1">&#39;SELECT ultimutt_size.Breed, `Average Height`, `Average Weight`, Classification, `All Around Friendliness`, Trainability, `Amount of Shedding`, `Exercise Needs`, `General Health`</span><span class="se">\</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s1">&#39;SELECT ultimutt_size.Breed, `Average Height (in)`, `Average Weight (lb)`, Classification, `All Around Friendliness`, Trainability, `Amount of Shedding`, `Exercise Needs`, `General Health`</span><span class="se">\</span>
 <span class="s1">                FROM ultimutt_size</span><span class="se">\</span>
 <span class="s1">                JOIN ultimutt_class</span><span class="se">\</span>
 <span class="s1">                USING (Breed)</span><span class="se">\</span>
@@ -13927,8 +13927,8 @@ a.anchor-link {
     <tr style="text-align: right;">
       <th></th>
       <th>Breed</th>
-      <th>Average Height</th>
-      <th>Average Weight</th>
+      <th>Average Height (in)</th>
+      <th>Average Weight (lb)</th>
       <th>Classification</th>
       <th>All Around Friendliness</th>
       <th>Trainability</th>
