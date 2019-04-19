@@ -1,5 +1,5 @@
 ## Eat Treat Love - The "Ultimutt" List
-######(ETL Project DS+V 2019)
+#####(ETL Project DS+V 2019)
 
 **Team Members:** Courtney Gainor [/cgainor/](https://github.com/cgainor) James Carter [/jmc39/](https://github.com/jmc39) Jorge Pires [/jorgepires311/](https://github.com/jorgepires311)
 
