@@ -14,4 +14,4 @@
 
 [**CLICK HERE FOR FINAL REPORT**](https://docs.google.com/document/d/1SbHMQCRS3guBRtU5js-dMR26pC4qNiSP7Nev19Esx5U/edit?usp=sharing)
 
-[**CLICK HERE FOR PRESENTATION**](https://docs.google.com/presentation/d/1GlI7jKDVpNcZJXpVCu9Yk6O-FZoy9k7JqBNP_PUoh4M/edit?usp=sharing)
+[**CLICK HERE FOR PRESENTATION**](https://cgainor.github.io/ETL-Project/)
